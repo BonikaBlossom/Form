@@ -1,4 +1,6 @@
-.buy {
-    background: yellowgreen;
-
+.menu {
+    display: none;
+}
+.formfields{
+    display: none;
 }
