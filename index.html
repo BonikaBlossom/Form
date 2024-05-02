@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <button class="firstmenu">купити</button>
+        <div id="blabla">
         <form class="menu">
             <lable>
                 ПІБ покупця:
-                <input type="text" name="ПІБ покупця" />
+                <input type="text" name="user_name" />
             </lable>
                 <p>
                     Місто (вибір зі списку)
@@ -24,41 +25,45 @@
                 </p>
             <label>
                 Склад Нової пошти для надсилання
-                    <input type="text" name="Склад Нової пошти для надсилання" />
+                    <input type="text" name="sklad" />
             </label></br>
             <label>
                 Післяплати або оплати банківської картки
-                    <input type="text" name="ПІБ покупця" />
+                    <input type="text" name="card" />
             </label></br>
             <label>
                 Кількість продукції, що купується
-                    <input type="text" name="Кількість продукції, що купується" />
+                    <input type="text" name="howmatch" />
             </label></br>
             <label>
                 Коментар до замовлення
-                    <input type="text" name="Коментар до замовлення" />
+                    <input type="text" name="comment" />
             </label></br>
             <input type="submit" value="Submit" />
         </form>
-        <div class="formfields" id=formfields>
+    </div>
+        <div class="formfields">
             <div class="form-section">
-            <p class="text-template">ПІБ покупця:</p>
+            <p class="user-name"></p>
             <p class="text-form nameField"></p>
-            <p class="text-template">Місто (вибір зі списку):</p>
+            <p class="text-city">Місто (вибір зі списку):</p>
             <p class="text-form cityField"></p>
-            <p class="text-template">Склад Нової пошти для надсилання:</p>
+            <p class="text-sklad">Склад Нової пошти для надсилання:</p>
             <p class="text-form deliveryField"></p>
             </div>
             <div class="form-section">
-            <p class="text-template">
+            <p class="text-card">
             Післяплати або оплати банківської картки:
             </p>
             <p class="text-form payMethodField"></p>
-            <p class="text-template">Кількість продукції, що купується:</p>
+            <p class="text-howmatch">Кількість продукції, що купується:</p>
             <p class="text-form countProductsField"></p>
-            <p class="text-template">Коментар до замовлення:</p>
+            <p class="text-comment">Коментар до замовлення:</p>
             <p class="text-form commentField"></p>
             </div>
         </div>
+        </form>
+
 </body>
+<script src="index.js"></script>
 </html>

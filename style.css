@@ -1,6 +1,13 @@
-.menu {
+#blabla {
     display: none;
+}
+#blabla.open {
+    display: block;
 }
 .formfields{
     display: none;
+}
+
+.formfields.open{
+    display: block;
 }

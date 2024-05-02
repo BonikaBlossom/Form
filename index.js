@@ -1,8 +1,14 @@
-const buttonBuy = document.querySelector('button');
+const button = document.querySelector('button');
+const form = document.querySelector('#blabla');
 
-buttonBuy.addEventListener('click', () => {
- form.style.display = 'block'
+button.addEventListener('click', () => {
+    form.classList.add('open');
+  });
+
+/*buttonBuy.addEventListener('click', () => {
+ form.style.display = 'block';
 })
+textform.textContent = newText;
 
 let getList = document.querySelectorAll('.firstmenu');
 
@@ -20,7 +26,8 @@ function showList () {
             getmenu.style.display = 'block';
         }
     }
-}
+}*/
+
 
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -36,10 +43,25 @@ document.querySelector('form').addEventListener('submit', function(event) {
         }
     })
     console.log(formObject)
+
+    document.querySelector('.formfields').classList.add('open');
+
+    document.querySelector('.user-name').textContent = `ПІБ покупця: ${formObject.user_name}`;
+    document.querySelector('.text-city').textContent = `Місто (вибір зі списку): ${formObject.city}`;
+    document.querySelector('.text-sklad').textContent = `Склад Нової пошти для надсилання: ${formObject.sklad}`;
+    document.querySelector('.text-card').textContent = `Післяплати або оплати банківської картки: ${formObject.card}`;
+    document.querySelector('.text-howmatch').textContent = `Кількість продукції, що купується: ${formObject.howmatch}`;
+    document.querySelector('.text-comment').textContent = `Коментар до замовлення: ${formObject.comment}`;
+
     validate(formObject)  
-    }) 
-    function validate(form) {
-    if(form.password = undefined) {
-        document.querySelector('formfields').style.display ='inline';
+})
+
+function validate(object) {
+    if(object.name.length = /[A-z][A-z][A-z]/) {
+        document.querySelector('span').style.display ='inline';
     }
+function validate(object) {
+    if(object.password.length < 4) {
+        document.querySelector('span').style.display ='inline';
     }
+}
